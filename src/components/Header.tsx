@@ -13,14 +13,14 @@ const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
   return (
     <Dynamic>
-      <div className="flex fixed top-0 right-0 backdrop-blur-md left-0 z-30 pt-6 justify-center from-[#dcdcdc9d] pb-3 dark:from-[#3d424485] bg-gradient-to-tr to-transparent">
+      <div className="flex fixed top-0 right-0 backdrop-blur-md left-0 z-30 pt-6 justify-center from-[#dcdcdc9d] pb-5 dark:from-[#3d424485] bg-gradient-to-tr to-transparent">
         <div className="container flex justify-between">
           {enabled ? (
-            <div className="flex h-11 px-2 mb-3 bg-neutral-400 rounded-md py-1 mr-auto">
+            <div className="flex h-11 px-2 mr-auto">
               <Image src={logoDark} width={110} objectFit="contain" />
             </div>
           ) : (
-            <div className="flex h-16 rounded-md mr-auto">
+            <div className="flex h-11 rounded-md mr-auto">
               <Image src={logo} width={110} objectFit="contain" />
             </div>
           )}
