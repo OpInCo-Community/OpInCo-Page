@@ -4,6 +4,19 @@
 @tailwind components;
 @tailwind utilities;
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  background-color: #0000;
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #13a89e;
+  border-radius: 1000px;
+}
+
 html,
 body {
   padding: 0;

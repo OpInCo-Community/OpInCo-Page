@@ -1,7 +1,19 @@
-import React, { useEffect } from "react"
+import React, { createContext, useContext, useEffect } from "react"
 import useLocalStorage from "./useLocalStorage"
 
-const useDarkMode = (): [val: boolean, setVal: (val: boolean) => void] => {
+interface Context {
+  enabled: boolean
+  setEnabled: (val: boolean) => void
+  toggleDark: () => void
+}
+
+const darkModeContext = createContext<Context>({} as Context)
+
+const useDarkMode = (): Context => {
+  return useContext(darkModeContext)
+}
+
+export function DarkModeProvider(props: React.PropsWithChildren<{}>) {
   const initialValue =
     typeof window !== "undefined"
       ? JSON.parse(window.localStorage.getItem("dark-mode") as string)
@@ -20,7 +32,18 @@ const useDarkMode = (): [val: boolean, setVal: (val: boolean) => void] => {
     } else bodyClass.remove(className)
   }, [enabled])
 
-  return [enabled, setEnabled]
+  const toggleDark = () => {
+    setEnabled(!enabled)
+  }
+
+  const value = { enabled, setEnabled, toggleDark }
+
+  return (
+    <darkModeContext.Provider
+      value={value}
+      {...props}
+    ></darkModeContext.Provider>
+  )
 }
 
 export default useDarkMode
