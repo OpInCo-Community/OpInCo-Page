@@ -1,5 +1,7 @@
 import Image from "next/image"
 import React from "react"
+import { BsTwitter, BsYoutube } from "react-icons/bs"
+import { FaInstagram, FaLinkedin } from "react-icons/fa"
 import logoDark from "../../public/assets/opincoDark.png"
 
 const Footer = () => {
@@ -30,6 +32,12 @@ const Footer = () => {
                 placeholder="email"
                 className="bg-white focus:outline-none text-gray-800 max-w-[20rem] px-4 rounded-md py-2"
               />
+              <div className="flex text-xl gap-4">
+                <FaLinkedin />
+                <FaInstagram />
+                <BsTwitter />
+                <BsYoutube />
+              </div>
             </div>
           </div>
         </div>
