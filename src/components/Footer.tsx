@@ -4,11 +4,11 @@ import logoDark from "../../public/assets/opincoDark.png"
 
 const Footer = () => {
   return (
-    <div className="w-full flex items-center flex-col bg-gradient-to-t pt-32 from-accent-200 to-transparent">
+    <div className="w-full flex items-center flex-col bg-gradient-to-t pt-36 via-accent-200 text-white from-accent-200 to-transparent">
       <div className="border-b-2 border-white flex w-full justify-center">
         <div className="container pb-10 grid grid-cols-6">
           <div className="flex items-center col-span-2">
-            <div className="flex h-14 px-2">
+            <div className="flex -translate-x-5 h-14 px-2">
               <Image src={logoDark} objectFit="contain" />
             </div>
           </div>
