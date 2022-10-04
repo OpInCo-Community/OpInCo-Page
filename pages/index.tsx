@@ -33,17 +33,17 @@ const Home: NextPage = () => {
       <div className="w-full flex flex-col items-center">
         <div className="container w-full flex flex-col">
           {/* intro */}
-          <div className="grid h-[90vh] grid-cols-2">
+          <div className="md:grid flex min-h-[60vh] md:min-h-[90vh] justify-center flex-col items-center grid-cols-2">
             <div className="flex justify-center items-center flex-col">
               <div className="flex flex-col max-w-xl">
-                <h1 className="text-5xl leading-snug font-bold">
-                  Tune in for Talks, <br /> Build Connection and
-                  Overhaul your Ability.
+                <h1 className="xl:text-5xl lg:text-4xl text-3xl sm:text-4xl md:text-3xl flex flex-col lg:gap-4 gap-2 font-bold">
+                  <div>Tune in for Talks,</div> <div>Build Connection and</div>
+                  <div>Overhaul your Ability.</div>
                 </h1>
-                <h3 className="uppercase text-2xl tracking-wider mt-7">
+                <h3 className="uppercase md:text-xl lg:text-2xl tracking-wider mt-7">
                   Join us now!
                 </h3>
-                <div className="flex mt-6 text-lg gap-8">
+                <div className="flex mt-6 lg:text-lg gap-5 sm:gap-8">
                   <AccentButton
                     className="tracking-wider shadow-[#0003] shadow-md uppercase"
                     Icon={FaDiscord}
@@ -65,8 +65,8 @@ const Home: NextPage = () => {
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-center ">
-              <div className="flex">
+            <div className="md:flex hidden items-center justify-center ">
+              <div className="flex xl:max-w-none max-w-xs">
                 <Image
                   src={enabled ? illustration : illustration_light}
                   objectFit="contain"
@@ -75,11 +75,11 @@ const Home: NextPage = () => {
             </div>
           </div>
           {/* about us */}
-          <div className="grid mt-20 grid-cols-2">
+          <div className="lg:grid flex flex-col mt-20 grid-cols-2">
             <div className="flex flex-col items-center">
-              <div className="flex flex-col max-w-xl gap-7">
+              <div className="flex flex-col text-center lg:text-left max-w-xl gap-7">
                 <h1 className="text-4xl font-bold">About us</h1>
-                <p className="text-gray-600 dark:text-white leading-loose text-xl">
+                <p className="text-gray-600 dark:text-white leading-loose sm:px-0 px-4 sm:text-xl lg:text-lg xl:text-xl">
                   Oplnco previously known as Devstucom represents Open Inclusive
                   Collaborative was founded in year 2020. <br />
                   <br />
@@ -89,17 +89,17 @@ const Home: NextPage = () => {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col items-center ml-20">
+            <div className="flex sm:px-0 px-5 flex-col lg:mt-0 mt-16 items-center ml-20 md:ml-24">
               <div className="flex flex-col max-w-xl gap-8">
                 <div className="flex flex-col relative gap-3">
-                  <div className="bg-accent-200 absolute w-0.5 h-96 left-[-4.4rem] top-5"></div>
+                  <div className="bg-accent-200 absolute w-0.5 h-[28rem] sm:h-96 left-[-2.8rem] md:left-[-4.4rem] top-5"></div>
                   <h4 className="text-3xl relative font-semibold flex text-accent-200">
-                    <div className="flex absolute top-1/2 -left-24 w-14 -translate-y-1/2 h-20 bg-neutral-100 py-3 border-neutral-100 dark:bg-neutral-400 transition-colors duration-200">
+                    <div className="flex absolute top-1/2 md:-left-24 -left-16 w-10 md:w-14 -translate-y-1/2 h-20 bg-neutral-100 py-3 border-neutral-100 dark:bg-neutral-400 transition-colors duration-200">
                       <Image objectFit="contain" src={openPng} />
                     </div>
                     Open
                   </h4>
-                  <p className="text-lg italic text-gray-700 dark:text-white ">
+                  <p className="md:text-lg sm:text-base text-sm italic text-gray-700 dark:text-white ">
                     &quot;Sharing is caring&quot;, and with opensource, sharing
                     is easier {";) "}
                     At OpInCo, we believe{" "}
@@ -113,12 +113,12 @@ const Home: NextPage = () => {
                 </div>
                 <div className="flex flex-col gap-2">
                   <h4 className="text-3xl relative font-semibold flex text-accent-200">
-                    <div className="flex absolute top-1/2 -left-24 w-14 -translate-y-1/2 h-20 bg-neutral-100 py-3 border-neutral-100 dark:bg-neutral-400 transition-colors duration-200">
+                    <div className="flex absolute top-1/2 md:-left-24 -left-16 w-10 md:w-14 -translate-y-1/2 h-20 bg-neutral-100 py-3 border-neutral-100 dark:bg-neutral-400 transition-colors duration-200">
                       <Image objectFit="contain" src={incluPng} />
                     </div>
                     Inclusive
                   </h4>
-                  <p className="text-lg italic text-gray-700 dark:text-white ">
+                  <p className="md:text-lg sm:text-base text-sm italic text-gray-700 dark:text-white ">
                     Diversity is vital, both in{" "}
                     <span className="text-accent-200">Culture</span> & in{" "}
                     <span className="text-accent-200">Technology</span>, with
@@ -130,12 +130,12 @@ const Home: NextPage = () => {
                 </div>
                 <div className="flex flex-col gap-2">
                   <h4 className="text-3xl relative font-semibold flex text-accent-200">
-                    <div className="flex absolute top-1/2 -left-24 w-14 -translate-y-1/2 h-20 bg-neutral-100 py-3 border-neutral-100 dark:bg-neutral-400 transition-colors duration-200">
+                    <div className="flex absolute top-1/2 md:-left-24 -left-16 w-10 md:w-14 -translate-y-1/2 h-20 bg-neutral-100 py-3 border-neutral-100 dark:bg-neutral-400 transition-colors duration-200">
                       <Image objectFit="contain" src={commPng} />
                     </div>
                     Community
                   </h4>
-                  <p className="text-lg italic text-gray-700 dark:text-white ">
+                  <p className="md:text-lg sm:text-base text-sm italic text-gray-700 dark:text-white ">
                     Simply stated, we profess:{" "}
                     <span className="text-accent-200">
                       &quot;Less Me and More We&quot;
@@ -146,18 +146,18 @@ const Home: NextPage = () => {
                 </div>
               </div>
             </div>
-            <div className="flex relative">
+            <div className="hidden lg:flex relative">
               <div className="flex absolute h-[550px] translate-x-16 -translate-y-16">
                 <Image objectFit="contain" src={opdev} />
               </div>
             </div>
-            <div className="flex justify-center my-28 flex-col">
-              <div className="flex flex-col">
-                <div className="text-4xl font-semibold">
+            <div className="flex justify-center my-20 md:my-28 flex-col">
+              <div className="flex items-center md:items-start flex-col">
+                <div className="md:text-4xl text-2xl font-semibold">
                   Know more about us!
                 </div>
               </div>
-              <div className="flex mt-6 text-xl">
+              <div className="flex mt-4 md:mt-6 justify-center md:justify-start text-lg md:text-xl">
                 <AccentButton
                   text="read our story"
                   className="uppercase flex-row-reverse"
@@ -169,14 +169,14 @@ const Home: NextPage = () => {
           </div>
         </div>
         <div className="py-20 w-full flex justify-center from-[#dcdcdc9d] dark:from-[#3d424485] bg-gradient-to-r to-transparent mt-32">
-          <div className="container grid grid-cols-3">
-            <div className="col-span-2 flex max-w-3xl flex-col">
+          <div className="container flex flex-col lg:grid grid-cols-3">
+            <div className="col-span-2 md:px-0 px-4 flex max-w-3xl flex-col">
               <h1 className="font-semibold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-accent-200 to-accent-100">
                 Why Join OpInCo?
               </h1>
               <div className="flex-col flex mt-16 gap-12">
                 <div className="flex flex-col gap-2">
-                  <div className="flex text-3xl items-center gap-4 font-medium">
+                  <div className="flex text-2xl sm:text-3xl items-center gap-4 font-medium">
                     <BiBarChartSquare />
                     <h4>Collaboration in Projects</h4>
                   </div>
@@ -187,7 +187,7 @@ const Home: NextPage = () => {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <div className="flex text-3xl items-center gap-4 font-medium">
+                  <div className="flex text-2xl sm:text-3xl items-center gap-4 font-medium">
                     <HiOutlinePresentationChartLine />
                     <h4>Guidence Sessions</h4>
                   </div>
@@ -197,7 +197,7 @@ const Home: NextPage = () => {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <div className="flex text-3xl items-center gap-4 font-medium">
+                  <div className="flex text-2xl sm:text-3xl items-center gap-4 font-medium">
                     <MdUpdate />
                     <h4>Stay up to date!</h4>
                   </div>
@@ -208,7 +208,7 @@ const Home: NextPage = () => {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <div className="flex text-3xl items-center gap-4 font-medium">
+                  <div className="flex text-2xl sm:text-3xl items-center gap-4 font-medium">
                     <FaRegHandshake />
                     <h4>Connect with people</h4>
                   </div>
@@ -219,7 +219,7 @@ const Home: NextPage = () => {
                 </div>
               </div>
             </div>
-            <div className="flex items-center">
+            <div className="hidden lg:flex items-center">
               {enabled ? (
                 <div className="">
                   <svg
@@ -385,7 +385,7 @@ const Home: NextPage = () => {
         <div className="py-20 flex w-full justify-center">
           <div className="container flex flex-col items-center">
             <h3 className="text-3xl font-semibold">Events</h3>
-            <div className="flex w-[70%] rounded-xl scale-75 bg-black">
+            <div className="flex w-full md:w-[70%] sm:rounded-lg md:rounded-xl my-8 md:scale-75 bg-black">
               <div
                 id="hacktober-fest-card"
                 className="flex z-20 relative text-[#E5E1E6] w-full items-center rounded-xl flex-col py-10 gap-6"

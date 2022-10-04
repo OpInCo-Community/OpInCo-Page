@@ -13,8 +13,8 @@ const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
   return (
     <Dynamic>
-      <div className="flex fixed top-0 right-0 backdrop-blur-md left-0 z-30 pt-6 justify-center from-[#dcdcdc9d] pb-5 dark:from-[#3d424485] bg-gradient-to-tr to-transparent">
-        <div className="container flex justify-between">
+      <div className="flex fixed top-0 right-0 backdrop-blur-md left-0 z-30 justify-center from-[#dcdcdc9d] py-3 md:py-5 dark:from-[#3d424485] bg-gradient-to-tr to-transparent">
+        <div className="container px-4 md:px-0 items-center flex justify-between">
           {enabled ? (
             <div className="flex h-11 px-2 mr-auto">
               <Image src={logoDark} width={110} objectFit="contain" />
@@ -27,7 +27,7 @@ const Header = () => {
           <ul
             className={`z-30 transition-transform delay-300 ${
               navbarOpen
-                ? "fixed top-0 bottom-0 right-0 left-1/3 flex translate-x-0 flex-col items-end bg-accent pt-20 pr-4 md:left-1/2"
+                ? "fixed h-screen text-lg top-0 bottom-0 right-0 left-1/3 flex gap-6 bg-gradient-to-t from-accent-200 to-neutral-200 dark:via-neutral-400 dark:to-neutral-400 translate-x-0 flex-col items-end bg-accent pt-20 pr-4 md:left-1/2"
                 : "pointer-events-none absolute translate-x-full items-center opacity-0 md:pointer-events-auto md:static md:flex md:translate-x-0 md:opacity-100"
             }`}
           >
@@ -57,7 +57,7 @@ const Header = () => {
               onClick={() => setNavbarOpen(false)}
             />
             <div
-              className={`p-2 cursor-pointer rounded-md text-2xl ml-6 ${
+              className={`p-2 cursor-pointer mr-3 md:mr-0 rounded-md text-2xl ml-6 ${
                 enabled
                   ? "bg-neutral-300"
                   : "bg-gray-400 shadow-xl text-gray-700"
@@ -71,11 +71,10 @@ const Header = () => {
           </ul>
           <FaBars
             size={25}
-            color="#fff"
             onClick={() => {
               setNavbarOpen(!navbarOpen)
             }}
-            className={`z-40 mr-4 h-full cursor-pointer ${
+            className={`z-40 text-accent-200 mr-4 h-full cursor-pointer ${
               !navbarOpen && "md:hidden"
             }`}
           />
@@ -102,7 +101,7 @@ const NavItem = ({
           link && router.push(link)
           onClick!()
         }}
-        className="my-auto mx-6 cursor-pointer text-xl transition-all ease-linear hover:text-accent-200"
+        className="my-auto mx-3 lg:mx-6 bg-neutral-100 px-2 rounded-md hover:border-2 dark:bg-neutral-400 border-dashed border-accent-200 cursor-pointer lg:text-xl transition-all ease-linear"
       >
         <span>{text}</span>
       </div>
