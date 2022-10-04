@@ -14,10 +14,18 @@ const useDarkMode = (): Context => {
 }
 
 export function DarkModeProvider(props: React.PropsWithChildren<{}>) {
-  const initialValue =
-    typeof window !== "undefined"
-      ? JSON.parse(window.localStorage.getItem("dark-mode") as string)
-      : false
+  let initialValue = false
+  if (typeof window !== "undefined") {
+    if (typeof window.localStorage.getItem("dark-mode") === "string")
+      initialValue = JSON.parse(
+        window.localStorage.getItem("dark-mode") as string
+      )
+    else {
+      const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)")
+      console.log(darkThemeMq)
+      if (darkThemeMq.matches) initialValue = true
+    }
+  }
   const [enabled, setEnabled] = useLocalStorage<boolean>(
     "dark-mode",
     initialValue

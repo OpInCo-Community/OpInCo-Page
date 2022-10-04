@@ -6,9 +6,16 @@ import illustration_light from "../public/assets/light_illustration.png"
 import openPng from "../public/assets/Open.png"
 import incluPng from "../public/assets/Inclusive.png"
 import commPng from "../public/assets/Community.png"
+import opdev from "../public/assets/opindev.png"
 import AccentButton from "../src/components/AccentButton"
 import useDarkMode from "../src/hooks/useDarkMode"
-import { FaDiscord, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa"
+import {
+  FaDiscord,
+  FaArrowAltCircleRight,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+} from "react-icons/fa"
 import { BsInstagram, BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs"
 
 const Home: NextPage = () => {
@@ -129,6 +136,24 @@ const Home: NextPage = () => {
                   achieving and creating wonderful possibilities together.
                 </p>
               </div>
+            </div>
+          </div>
+          <div className="flex relative">
+            <div className="flex absolute h-[550px] translate-x-16 -translate-y-16">
+              <Image objectFit="contain" src={opdev} />
+            </div>
+          </div>
+          <div className="flex justify-center mt-28 flex-col">
+            <div className="flex flex-col">
+              <div className="text-4xl font-semibold">Know more about us!</div>
+            </div>
+            <div className="flex mt-6 text-xl">
+              <AccentButton
+                text="read our story"
+                className="uppercase flex-row-reverse"
+                Icon={FaArrowAltCircleRight}
+                type="fill"
+              />
             </div>
           </div>
         </div>
