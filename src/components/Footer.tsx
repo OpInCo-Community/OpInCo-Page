@@ -1,14 +1,16 @@
 import Image from "next/image"
+import Link from "next/link"
 import React from "react"
+import { BiLink } from "react-icons/bi"
 import { BsTwitter, BsYoutube } from "react-icons/bs"
 import { FaInstagram, FaLinkedin } from "react-icons/fa"
 import logoDark from "../../public/assets/opincoDark.png"
 
 const Footer = () => {
   return (
-    <div className="w-full flex items-center flex-col bg-gradient-to-t pt-36 via-accent-200 text-white from-accent-200 to-transparent">
+    <div className="w-full px-6 md:px-0 flex items-center flex-col bg-gradient-to-t pt-36 via-accent-200 text-white from-accent-200 to-transparent">
       <div className="border-b-2 border-white flex w-full justify-center">
-        <div className="container pb-10 grid grid-cols-6">
+        <div className="container pb-10 gap-4 flex flex-col lg:grid grid-cols-6">
           <div className="flex items-center col-span-2">
             <div className="flex -translate-x-5 h-14 px-2">
               <Image src={logoDark} objectFit="contain" />
@@ -42,12 +44,23 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="container flex py-8 justify-between ">
-        <div className="flex gap-4 text-xl">
+      <div className="container md:flex-row flex-col flex md:py-8 py-6 justify-between ">
+        <div className="flex gap-4 md:text-xl">
           <h5>Copyright Opinco 2022</h5>
         </div>
-        <div className="text-xl">
-          Site developed By - Opinco Team Technical Team
+        <div className="flex gap-1 text-xs items-center md:text-xl">
+          {/* <p> */}
+          Site developed By -
+          <a
+            target={"_blank"}
+            rel={"noreferrer"}
+            className="flex underline items-center gap-1"
+            href="http://dewanshthakur.herokuapp.com"
+          >
+            <BiLink className="inline" />
+            Dewansh Thakur, Technical Team Opinco
+          </a>
+          {/* </p> */}
         </div>
       </div>
     </div>
