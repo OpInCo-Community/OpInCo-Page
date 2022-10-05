@@ -53,6 +53,7 @@ const Footer = () => {
           Site developed By -
           <a
             target={"_blank"}
+            rel={"noreferrer"}
             className="flex underline items-center gap-1"
             href="http://dewanshthakur.herokuapp.com"
           >
