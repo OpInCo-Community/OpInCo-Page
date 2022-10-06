@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import hacktoberfestlogo from '../public/assets/hacktoberfestlogo.jpg'
+import announcement from '../public/assets/announcement_poster.png'
 
 import {FaGithub} from "react-icons/fa"
 import AccentButton from "../src/components/AccentButton"
@@ -10,30 +11,32 @@ export default function hacktoberfest(){
     <>
         <div className="container w-full flex flex-col">
         {/* hacktoberfest logo */}
-        <div className="grid h-[90vh] gap-x-6 gap-y-6 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 justify-center">
-            <span className="grid ">
+        <div className="grid h-[90vh] gap-x-6 gap-y-6 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 justify-center">
+            <span className="grid m-5">
             <Image 
-            src={hacktoberfestlogo} 
+            src={announcement} 
             layout="responsive"
             objectFit="contain"
+            w-auto 
+            className="rounded-3xl"
             alt="Hacktoberfest Official Logo" />
             </span>
-            <span className="grid">
-            <div className="flex justify-center items-center flex-col">
-            <div className="flex flex-col max-w-xl">
-                <h1 className="text-5xl leading-snug font-bold">
-                    Hacktoberfest
+            <span className="grid announcement_content">
+            <div className="flex justify-center align-center items-center flex-col">
+            <div className="flex flex-col max-w-xl mt-7">
+                <h1 className="lg:text-6xl md:text-5xl sm:text-5xl xs:text-5xl xxs:text-5xl text-4xl leading-snug font-bold">
+                    HacktoberWeek
                 </h1>
-                <h3 className="uppercase text-2xl tracking-wider mt-7">
-                    Join Us for the week long event 
+                <h3 className="text-xl mt-7">
+                    Hack Club BIT Durg & OpInCo Community presents A week long In-person event conducting in Bhilai Institute of Technology, Durg to celebrate  Hacktoberfest  and Open source.
                 </h3>
-                <div className="flex mt-6 text-lg gap-8">
-                    and learn about Open Source
+                <div className="uppercase flex mt-6 text-lg gap-8 font-bold">
+                    7-15th October at BIT DURG
                 </div>
                 <div className="flex text-xl mt-6 gap-4">
-                and start your open source journey now!!
+                With everything from code, low-code to no-code sessions, we have got you covered🤞🏻 Mark your calendars and come boost your open-source journey!
                 </div>
-                <div className="flex mt-6 text-lg gap-8 register-button justify-center">
+                <div className="flex mt-6 text-lg gap-8 register-button justify-center m-12">
                 <a href="https://forms.gle/4BF2SQ1vBojJhj338/" target="__blank">
                     <AccentButton
                     className="tracking-wider shadow-[#0003] shadow-md uppercase"
@@ -49,7 +52,7 @@ export default function hacktoberfest(){
         {/* hacktoberfest logo */}
 
         {/* contributing steps */}
-        <div className="flex items-center justify-center contributing-heading">
+        {/* <div className="flex items-center justify-center contributing-heading">
             <h1 className="text-5xl leading-snug font-bold ">But How to contribute to Open Source?</h1>
         </div>
         <div className="all-steps">
@@ -91,18 +94,18 @@ export default function hacktoberfest(){
             <div className="flex">
             
             </div>
-        </div>
+        </div> */}
         {/* contributing steps */}
 
         {/* projects title*/}
-        <div className="flex items-center justify-center contributing-heading">
+        {/* <div className="flex items-center justify-center contributing-heading">
             <h1 className="text-5xl leading-snug font-bold ">Projects</h1>
-        </div>
+        </div> */}
         </div>
         {/* projects title */}
 
         {/* projects */}
-        <div className="container grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 gap-x-6 gap-y-6 md:w-auto sm:w-auto justify-center">
+        {/* <div className="container grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 gap-x-6 gap-y-6 md:w-auto sm:w-auto justify-center">
         <div className="w-[36vh] project-box">
             <div className="project-image">
             <Image 
@@ -252,7 +255,7 @@ export default function hacktoberfest(){
             </div>
             </div>
         </div>
-        </div>
+        </div> */}
     {/* projects */}
     </>
   );

@@ -36,6 +36,10 @@ a {
 }
 .container {
   padding: 1rem;
+  margin: -1.5rem 0;
+}
+.announcement_content{  
+  margin: 1rem 2rem;
 }
 
 .contributing-heading {
@@ -54,7 +58,7 @@ a {
 .project-box .project-image {
   border-top-left-radius: 1.2rem;
   border-top-right-radius: 1.2rem;
-  margin: -.1rem;
+  margin: -.05rem;
 }
 
 .project-box div.project-text {
