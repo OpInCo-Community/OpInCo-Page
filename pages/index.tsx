@@ -522,7 +522,7 @@ const Home: NextPage = () => {
                     <Image src={opincircle} objectFit="contain" />
                   </div> */}
                   <div className="flex justify-center lg:translate-y-0 -translate-y-32 items-center flex-col">
-                    <h2 className="bg-gradient-to-r from-[#FBE089] via-[#8DE3DB] to-[#899BFA] bg-clip-text font-semibold text-transparent text-5xl mt-4">
+                    <h2 className="bg-gradient-to-r from-[#FBE089] via-[#8DE3DB] to-[#899BFA] bg-clip-text font-semibold text-transparent text-4xl md:text-5xl mt-4">
                       HacktoberWeek
                     </h2>
                     <p className="font-semibold max-w-3xl text-[#E5E1E6] text-center mt-4">
