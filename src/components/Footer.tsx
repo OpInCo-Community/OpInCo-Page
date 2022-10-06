@@ -45,12 +45,12 @@ const Footer = () => {
         </div>
       </div>
       <div className="container md:flex-row flex-col flex md:py-8 py-6 justify-between ">
-        <div className="flex gap-4 md:text-xl">
-          <h5>Copyright Opinco 2022</h5>
+        <div className="flex flex-col lg:flex-row text-sm gap-4 lg:text-xl">
+          <h5 className="text-center">Copyright Opinco 2022</h5>
         </div>
-        <div className="flex gap-1 text-xs items-center md:text-xl">
+        <div className="flex flex-col text-xs md:text-sm lg:text-xl md:flex-row gap-1 items-center">
           {/* <p> */}
-          Site developed By -
+          Site developed By
           <a
             target={"_blank"}
             rel={"noreferrer"}
