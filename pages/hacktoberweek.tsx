@@ -8,16 +8,16 @@ import AccentButton from "../src/components/AccentButton"
 export default function hacktoberfest() {
   return (
     <>
-      <div className="container p-4 -mx-6 w-full flex flex-col">
+      <div className="container py-4 -mx-6 w-full flex flex-col">
         {/* hacktoberfest logo */}
-        <div className="grid h-[90vh] gap-x-6 gap-y-6 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 justify-center">
+        <div className="grid gap-x-6 gap-y-6 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 justify-center">
           <span className="grid m-5">
             <Image
               src={announcement}
               layout="responsive"
               objectFit="contain"
               w-auto
-              className="rounded-3xl"
+              className="sm:rounded-3xl "
               alt="Hacktoberfest Official Logo"
             />
           </span>
