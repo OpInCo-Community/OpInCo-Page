@@ -72,3 +72,34 @@ a {
 * {
   box-sizing: border-box;
 }
+.container {
+  padding: 1rem;
+  margin: -1.5rem 0;
+}
+.announcement_content{  
+  margin: 1rem 2rem;
+}
+
+.contributing-heading {
+  margin: 3rem 2rem;
+}
+
+.contributing-steps {
+  margin: 3rem 5rem;
+}
+
+.project-box {
+  border: 2px solid #13a89e;
+  border-radius: 1.2rem;
+}
+
+.project-box .project-image {
+  border-top-left-radius: 1.2rem;
+  border-top-right-radius: 1.2rem;
+  margin: -.05rem;
+}
+
+.project-box div.project-text {
+  padding: 1rem 1.5rem;
+  margin: .1rem;
+}
