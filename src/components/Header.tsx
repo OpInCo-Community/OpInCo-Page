@@ -43,7 +43,7 @@ const Header = () => {
             />
             <NavItem
               text="Events"
-              link="/events"
+              link="/hacktoberweek"
               onClick={() => setNavbarOpen(false)}
             />
             <NavItem
