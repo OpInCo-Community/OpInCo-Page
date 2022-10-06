@@ -3,11 +3,9 @@ import hacktoberfestlogo from '../public/assets/hacktoberfestlogo.jpg'
 
 import {FaGithub} from "react-icons/fa"
 import AccentButton from "../src/components/AccentButton"
-import useDarkMode from "../src/hooks/useDarkMode"
 
 
 export default function hacktoberfest(){
-    const { enabled } = useDarkMode()
   return (
     <>
         <div className="container w-full flex flex-col">
