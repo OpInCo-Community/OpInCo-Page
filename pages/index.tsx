@@ -172,7 +172,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className="py-20 w-full flex justify-center from-[#dcdcdc9d] dark:from-[#3d424485] bg-gradient-to-r to-transparent mt-32">
+        <div className="py-20 w-full xl:px-8 flex justify-center from-[#dcdcdc9d] dark:from-[#3d424485] bg-gradient-to-r to-transparent mt-32">
           <div className="container flex flex-col lg:grid grid-cols-3">
             <div className="col-span-2 md:px-0 px-4 flex max-w-3xl flex-col">
               <h1 className="font-semibold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-accent-200 to-accent-100">

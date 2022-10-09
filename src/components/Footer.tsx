@@ -9,7 +9,7 @@ import logoDark from "../../public/assets/opincoDark.png"
 const Footer = () => {
   return (
     <div className="w-full px-6 md:px-0 flex items-center flex-col bg-gradient-to-t pt-36 via-accent-200 text-white from-accent-200 to-transparent">
-      <div className="border-b-2 border-white flex w-full justify-center">
+      <div className="xl:px-6 border-b-2 border-white flex w-full justify-center">
         <div className="container pb-10 gap-4 flex flex-col lg:grid grid-cols-6">
           <div className="flex items-center col-span-2">
             <div className="flex -translate-x-5 h-14 px-2">
@@ -44,7 +44,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="container md:flex-row flex-col flex md:py-8 py-6 justify-between ">
+      <div className="xl:px-6 container md:flex-row flex-col flex md:py-8 py-6 justify-between ">
         <div className="flex flex-col lg:flex-row text-sm gap-4 lg:text-xl">
           <h5 className="text-center">Copyright Opinco 2022</h5>
         </div>

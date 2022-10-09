@@ -13,7 +13,7 @@ const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
   return (
     <Dynamic>
-      <div className="flex fixed top-0 right-0 backdrop-blur-md left-0 z-30 justify-center from-[#dcdcdc9d] py-3 md:py-5 dark:from-[#3d424485] bg-gradient-to-tr to-transparent">
+      <div className="flex fixed top-0 xl:px-6 right-0 backdrop-blur-md left-0 z-30 justify-center from-[#dcdcdc9d] py-3 md:py-5 dark:from-[#3d424485] bg-gradient-to-tr to-transparent">
         <div className="container px-4 md:px-0 items-center flex justify-between">
           {enabled ? (
             <div className="flex h-11 px-2 mr-auto">
