@@ -12,5 +12,12 @@
     "linkedIn": "link-yourlink",
     "project-name": "my-project",
     "project-link": "xyx.com"
+  },
+  {
+    "name": "Rishabh Chaudhari",
+    "github": "https://github.com/Raporaz03",
+    "linkedIn": "https://www.linkedin.com/in/rishabh-chaudhari-015526225/",
+    "project-name": "WEb Dev",
+    "project-link": "https://github.com/Raporaz03/webdev.github.io"
   }
 ]
