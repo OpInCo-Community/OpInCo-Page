@@ -92,7 +92,10 @@ export default function Hacktoberfest() {
       </div>
       <div className="flex px-4 container flex-col mt-10">
         <h1 className="text-2xl md:text-4xl my-6 font-semibold">
-          Our Contributors <span className="text-gray-700">&amp; Projects</span>
+          Our Contributors{" "}
+          <span className="text-gray-700 dark:text-gray-400">
+            &amp; Projects
+          </span>
         </h1>
         <div className="flex flex-col gap-6">
           {data?.map((value) => (
