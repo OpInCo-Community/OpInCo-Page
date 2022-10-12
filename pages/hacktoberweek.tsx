@@ -1,9 +1,26 @@
 import Image from "next/image"
-// import hacktoberfestlogo from "../../public/assets/hacktoberfestlogo.jpg"
+import { FaGithub } from "react-icons/fa"
+import hacktoberfestlogo from "../public/assets/hacktoberfestlogo.jpg"
+import ContributorCard from "../src/components/hacktoberweek/ContributorCard"
 import announcement from "../public/assets/announcement_poster.png"
 import AccentButton from "../src/components/AccentButton"
+import day1 from "../public/assets/day1.png"
+import day2 from "../public/assets/day2.png"
+import day3 from "../public/assets/day3.png"
+import day4 from "../public/assets/day4.png"
+import contributorData from "../contribution.json"
+import { useState } from "react"
+
+export interface Contributor {
+  name: string
+  github: string
+  linkedIn: string
+  "project-name": string
+  "project-link": string
+}
 
 export default function Hacktoberfest() {
+  const [data, setData] = useState<Contributor[]>(contributorData)
   return (
     <>
       <div className="container py-4 -mx-6 w-full flex flex-col">
@@ -53,214 +70,36 @@ export default function Hacktoberfest() {
             </div>
           </span>
         </div>
-        {/* hacktoberfest logo */}
-
-        {/* contributing steps */}
-        {/* <div className="flex items-center justify-center mx-8 my-12">
-            <h1 className="text-5xl leading-snug font-bold ">But How to contribute to Open Source?</h1>
-        </div>
-        <div className="all-steps">
-        <div className="grid grid-cols-1 gap-2">
-            <div className="flex">
-            <h6 className="text-2xl leading-snug font-bold">Step1</h6>
-            <h3 className="text-2xl mt-7">
-                Join Us for the week long event Join Us for the week long event Join Us for the week long event Join Us for the week long event Join Us for the week long event Join Us for the week long event 
-            </h3>
-            </div>
-            <div className="flex"></div>
-        </div>
-
-        <div className="grid grid-cols-1 gap-2">
-            <div className="flex">
-            <h6 className="text-2xl leading-snug font-bold">Step1</h6>
-            <h3 className="text-2xl mt-7">
-                Join Us for the long event Join Us for the week long event Join Us for the week long event Join Us for the week long event Join Us for the week long event Join Us for the week long event 
-            </h3>
-            </div>
-            <div className="flex"></div>
-        </div>
-            <div className="flex">
-            <h6 className="text-2xl leading-snug font-bold">Step1</h6>
-            <h3 className="text-2xl mt-7">
-                Join Us for the week long event Join Us for the week long event Join Us for the week long event Join Us for the week long event Join Us for the week long event Join Us for the week long event 
-            </h3>
-            </div>
-            <div className="flex">
-                
-            </div>
-
-            <div className="flex">
-            <h6 className="text-2xl leading-snug font-bold">Step1</h6>
-            <h3 className="text-2xl mt-7">
-                Join Us for the week long event Join Us for the week long event Join Us for the week long event Join Us for the week long event Join Us for the week long event Join Us for the week long event 
-            </h3>
-            </div>
-            <div className="flex">
-            
-            </div>
-        </div> */}
-        {/* contributing steps */}
-
-        {/* projects title*/}
-        {/* <div className="flex items-center justify-center mx-8 my-12">
-            <h1 className="text-5xl leading-snug font-bold ">Projects</h1>
-        </div> */}
       </div>
-      {/* projects title */}
-
-      {/* projects */}
-      {/* <div className="container grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 gap-x-6 gap-y-6 md:w-auto sm:w-auto justify-center">
-        <div className="w-[36vh] project-box">
-            <div className="project-image">
-            <Image 
-            src={hacktoberfestlogo} 
-            layout="responsive"
-            objectFit="contain"
-            alt="Hacktoberfest Official Logo" className="project-image"/>
-            </div>
-            <div className="project-text">
-            <h1 className="text-2xl leading-snug font-bold">Project Name</h1>
-            <h3 className="uppercase text-xl tracking-wider mt-7">Niche
-            </h3>
-            <div className="flex text-xl mt-6 gap-4">
-            about project </div>
-            <div className="flex mt-6 text-lg gap-8 project-button justify-center">
-                <AccentButton
-                className="tracking-wider shadow-[#0003] shadow-md uppercase"
-                Icon={FaGithub}
-                text="Github"
-                type="fill"
-                />
-            </div>
-            </div>
+      <div className="container px-4 flex flex-col">
+        <h1 className="text-2xl md:text-4xl my-6 font-semibold">
+          Upcoming events
+        </h1>
+        <div className="grid mt-4 md:grid-cols-2 gap-8">
+          <div className="flex w-[30rem]3">
+            <Image src={day1} objectFit="contain" />
+          </div>
+          <div className="flex w-[30rem]3">
+            <Image src={day2} objectFit="contain" />
+          </div>
+          <div className="flex w-[30rem]3">
+            <Image src={day3} objectFit="contain" />
+          </div>
+          <div className="flex w-[30rem]3">
+            <Image src={day4} objectFit="contain" />
+          </div>
         </div>
-        <div className="w-[36vh] project-box">
-            <div className="project-image">
-            <Image 
-            src={hacktoberfestlogo} 
-            layout="responsive"
-            objectFit="contain"
-            alt="Hacktoberfest Official Logo" className="project-image"/>
-            </div>
-            <div className="project-text">
-            <h1 className="text-2xl leading-snug font-bold">Project Name</h1>
-            <h3 className="uppercase text-xl tracking-wider mt-7">
-                Niche
-            </h3>
-            <div className="flex text-xl mt-6 gap-4">
-            about project </div>
-            <div className="flex mt-6 text-lg gap-8 project-button justify-center">
-                <AccentButton
-                className="tracking-wider shadow-[#0003] shadow-md uppercase"
-                Icon={FaGithub}
-                text="Github"
-                type="fill"
-                />
-            </div>
-            </div>
+      </div>
+      <div className="flex px-4 container flex-col mt-10">
+        <h1 className="text-2xl md:text-4xl my-6 font-semibold">
+          Our Contributors <span className="text-gray-700">&amp; Projects</span>
+        </h1>
+        <div className="flex flex-col gap-6">
+          {data?.map((value) => (
+            <ContributorCard data={value} key={value.github} />
+          ))}
         </div>
-        <div className="w-[36vh] project-box">
-            <div className="project-image">
-            <Image 
-            src={hacktoberfestlogo} 
-            layout="responsive"
-            objectFit="contain"
-            alt="Hacktoberfest Official Logo" className="project-image"/>
-            </div>
-            <div className="project-text">
-            <h1 className="text-2xl leading-snug font-bold">Project Name</h1>
-            <h3 className="uppercase text-xl tracking-wider mt-7">
-                Niche
-            </h3>
-            <div className="flex text-xl mt-6 gap-4">
-            about project </div>
-            <div className="flex mt-6 text-lg gap-8 project-button justify-center">
-                <AccentButton
-                className="tracking-wider shadow-[#0003] shadow-md uppercase"
-                Icon={FaGithub}
-                text="Github"
-                type="fill"
-                />
-            </div>
-            </div>
-        </div>
-        <div className="w-[36vh] project-box">
-            <div className="project-image">
-            <Image 
-            src={hacktoberfestlogo} 
-            layout="responsive"
-            objectFit="contain"
-            alt="Hacktoberfest Official Logo" className="project-image"/>
-            </div>
-            <div className="project-text">
-            <h1 className="text-2xl leading-snug font-bold">Project Name</h1>
-            <h3 className="uppercase text-xl tracking-wider mt-7">
-                Niche
-            </h3>
-            <div className="flex text-xl mt-6 gap-4">
-            about project </div>
-            <div className="flex mt-6 text-lg gap-8 project-button justify-center">
-                <AccentButton
-                className="tracking-wider shadow-[#0003] shadow-md uppercase"
-                Icon={FaGithub}
-                text="Github"
-                type="fill"
-                />
-            </div>
-            </div>
-        </div>
-        <div className="w-[36vh] project-box">
-            <div className="project-image">
-            <Image 
-            src={hacktoberfestlogo} 
-            layout="responsive"
-            objectFit="contain"
-            alt="Hacktoberfest Official Logo" className="project-image"/>
-            </div>
-            <div className="project-text">
-            <h1 className="text-2xl leading-snug font-bold">Project Name</h1>
-            <h3 className="uppercase text-xl tracking-wider mt-7">
-                Niche
-            </h3>
-            <div className="flex text-xl mt-6 gap-4">
-            about project </div>
-            <div className="flex mt-6 text-lg gap-8 project-button justify-center">
-                <AccentButton
-                className="tracking-wider shadow-[#0003] shadow-md uppercase"
-                Icon={FaGithub}
-                text="Github"
-                type="fill"
-                />
-            </div>
-            </div>
-        </div>
-        <div className="w-[36vh] project-box">
-            <div className="project-image">
-            <Image 
-            src={hacktoberfestlogo} 
-            layout="responsive"
-            objectFit="contain"
-            alt="Hacktoberfest Official Logo" className="project-image"/>
-            </div>
-            <div className="project-text">
-            <h1 className="text-2xl leading-snug font-bold">Project Name</h1>
-            <h3 className="uppercase text-xl tracking-wider mt-7">
-                Niche
-            </h3>
-            <div className="flex text-xl mt-6 gap-4">
-            about project </div>
-            <div className="flex mt-6 text-lg gap-8 project-button justify-center">
-                <AccentButton
-                className="tracking-wider shadow-[#0003] shadow-md uppercase"
-                Icon={FaGithub}
-                text="Github"
-                type="fill"
-                />
-            </div>
-            </div>
-        </div>
-        </div> */}
-      {/* projects */}
+      </div>
     </>
   )
 }
