@@ -48,24 +48,61 @@ const Home: NextPage = () => {
                   Join us now!
                 </h3>
                 <div className="flex mt-6 lg:text-lg gap-5 sm:gap-8">
-                  <AccentButton
-                    className="tracking-wider shadow-[#0003] shadow-md uppercase"
-                    Icon={FaDiscord}
-                    text="Discord"
-                    type="fill"
-                  />
-                  <AccentButton
-                    className="tracking-wider shadow-[#0003] shadow-md uppercase"
-                    Icon={FaGithub}
-                    text="GitHub"
-                    type="outline"
-                  />
+                  <a
+                    target={"_blank"}
+                    rel={"noreferrer"}
+                    href="https://discord.gg/26ewkaV"
+                  >
+                    <AccentButton
+                      className="tracking-wider shadow-[#0003] shadow-md uppercase"
+                      Icon={FaDiscord}
+                      text="Discord"
+                      type="fill"
+                    />
+                  </a>
+                  <a
+                    target={"_blank"}
+                    rel={"noreferrer"}
+                    href="https://github.com/OpInCo-Community"
+                  >
+                    <AccentButton
+                      className="tracking-wider shadow-[#0003] shadow-md uppercase"
+                      Icon={FaGithub}
+                      text="GitHub"
+                      type="outline"
+                    />
+                  </a>
                 </div>
                 <div className="flex text-xl mt-6 gap-4">
-                  <FaLinkedin />
-                  <FaInstagram />
-                  <BsTwitter />
-                  <BsYoutube />
+                  <a
+                    target={"_blank"}
+                    rel={"noreferrer"}
+                    href="https://www.linkedin.com/company/opincocommunity/"
+                  >
+                    <FaLinkedin />
+                  </a>
+                  <a
+                    target={"_blank"}
+                    rel={"noreferrer"}
+                    href="https://www.instagram.com/opincocommunity/"
+                  >
+                    <FaInstagram />
+                  </a>
+                  <a
+                    target={"_blank"}
+                    rel={"noreferrer"}
+                    href="https://twitter.com/opincocommunity"
+                  >
+                    <BsTwitter />
+                  </a>
+
+                  <a
+                    target={"_blank"}
+                    rel={"noreferrer"}
+                    href="https://www.youtube.com/c/OpInCoCommunity"
+                  >
+                    <BsYoutube />
+                  </a>
                 </div>
               </div>
             </div>
