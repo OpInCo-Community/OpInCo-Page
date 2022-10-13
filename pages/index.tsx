@@ -1,15 +1,15 @@
-import type { NextPage } from "next"
-import Head from "next/head"
-import Image from "next/image"
-import illustration from "../public/assets/dark_illustration.png"
-import illustration_light from "../public/assets/light_illustration.png"
-import openPng from "../public/assets/Open.png"
-import incluPng from "../public/assets/Inclusive.png"
-import commPng from "../public/assets/Community.png"
-import opdev from "../public/assets/opindev.png"
-import AccentButton from "../src/components/AccentButton"
-import useDarkMode from "../src/hooks/useDarkMode"
-import opincircle from "../public/assets/opinco-circle.png"
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import illustration from "../public/assets/dark_illustration.png";
+import illustration_light from "../public/assets/light_illustration.png";
+import openPng from "../public/assets/Open.png";
+import incluPng from "../public/assets/Inclusive.png";
+import commPng from "../public/assets/Community.png";
+import opdev from "../public/assets/opindev.png";
+import AccentButton from "../src/components/AccentButton";
+import useDarkMode from "../src/hooks/useDarkMode";
+import opincircle from "../public/assets/opinco-circle.png";
 import {
   FaDiscord,
   FaArrowAltCircleRight,
@@ -17,17 +17,17 @@ import {
   FaInstagram,
   FaLinkedin,
   FaRegHandshake,
-} from "react-icons/fa"
-import { BsTwitter, BsYoutube } from "react-icons/bs"
-import { BiBarChartSquare } from "react-icons/bi"
-import { HiOutlinePresentationChartLine } from "react-icons/hi"
-import { MdUpdate } from "react-icons/md"
-import Link from "next/link"
-import { useRouter } from "next/router"
+} from "react-icons/fa";
+import { BsTwitter, BsYoutube } from "react-icons/bs";
+import { BiBarChartSquare } from "react-icons/bi";
+import { HiOutlinePresentationChartLine } from "react-icons/hi";
+import { MdUpdate } from "react-icons/md";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
-  const { enabled } = useDarkMode()
-  const router = useRouter()
+  const { enabled } = useDarkMode();
+  const router = useRouter();
   return (
     <>
       <Head>
@@ -48,24 +48,61 @@ const Home: NextPage = () => {
                   Join us now!
                 </h3>
                 <div className="flex mt-6 lg:text-lg gap-5 sm:gap-8">
-                  <AccentButton
-                    className="tracking-wider shadow-[#0003] shadow-md uppercase"
-                    Icon={FaDiscord}
-                    text="Discord"
-                    type="fill"
-                  />
-                  <AccentButton
-                    className="tracking-wider shadow-[#0003] shadow-md uppercase"
-                    Icon={FaGithub}
-                    text="GitHub"
-                    type="outline"
-                  />
+                  <a
+                    target={"_blank"}
+                    rel={"noreferrer"}
+                    href="https://discord.gg/26ewkaV"
+                  >
+                    <AccentButton
+                      className="tracking-wider shadow-[#0003] shadow-md uppercase"
+                      Icon={FaDiscord}
+                      text="Discord"
+                      type="fill"
+                    />
+                  </a>
+                  <a
+                    target={"_blank"}
+                    rel={"noreferrer"}
+                    href="https://github.com/OpInCo-Community"
+                  >
+                    <AccentButton
+                      className="tracking-wider shadow-[#0003] shadow-md uppercase"
+                      Icon={FaGithub}
+                      text="GitHub"
+                      type="outline"
+                    />
+                  </a>
                 </div>
+
                 <div className="flex text-xl mt-6 gap-4">
-                  <FaLinkedin />
-                  <FaInstagram />
-                  <BsTwitter />
-                  <BsYoutube />
+                  <a
+                    target={"_blank"}
+                    rel={"noreferrer"}
+                    href="https://www.linkedin.com/company/opincocommunity/"
+                  >
+                    <FaLinkedin />
+                  </a>
+                  <a
+                    target={"_blank"}
+                    rel={"noreferrer"}
+                    href="https://www.instagram.com/opincocommunity/"
+                  >
+                    <FaInstagram />
+                  </a>
+                  <a
+                    target={"_blank"}
+                    rel={"noreferrer"}
+                    href="https://twitter.com/opincocommunity"
+                  >
+                    <BsTwitter />
+                  </a>
+                  <a
+                    target={"_blank"}
+                    rel={"noreferrer"}
+                    href="https://www.youtube.com/c/OpInCoCommunity"
+                  >
+                    <BsYoutube />
+                  </a>
                 </div>
               </div>
             </div>
@@ -536,7 +573,7 @@ const Home: NextPage = () => {
                     </h6>
                     <AccentButton
                       onClick={() => {
-                        router.push("/hacktoberweek")
+                        router.push("/hacktoberweek");
                       }}
                       text="Read More"
                       type="fill"
@@ -550,7 +587,7 @@ const Home: NextPage = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
