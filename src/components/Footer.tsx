@@ -1,10 +1,10 @@
-import Image from "next/image"
-import Link from "next/link"
-import React from "react"
-import { BiLink } from "react-icons/bi"
-import { BsTwitter, BsYoutube } from "react-icons/bs"
-import { FaInstagram, FaLinkedin } from "react-icons/fa"
-import logoDark from "../../public/assets/opincoDark.png"
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import { BiLink } from "react-icons/bi";
+import { BsTwitter, BsYoutube } from "react-icons/bs";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import logoDark from "../../public/assets/opincoDark.png";
 
 const Footer = () => {
   return (
@@ -35,10 +35,34 @@ const Footer = () => {
                 className="bg-white focus:outline-none text-gray-800 max-w-[20rem] px-4 rounded-md py-2"
               />
               <div className="flex text-xl gap-4">
-                <FaLinkedin />
-                <FaInstagram />
-                <BsTwitter />
-                <BsYoutube />
+                <a
+                  target={"_blank"}
+                  rel={"noreferrer"}
+                  href="https://www.linkedin.com/company/opincocommunity/"
+                >
+                  <FaLinkedin />
+                </a>
+                <a
+                  target={"_blank"}
+                  rel={"noreferrer"}
+                  href="https://www.instagram.com/opincocommunity/"
+                >
+                  <FaInstagram />
+                </a>
+                <a
+                  target={"_blank"}
+                  rel={"noreferrer"}
+                  href="https://twitter.com/opincocommunity"
+                >
+                  <BsTwitter />
+                </a>
+                <a
+                  target={"_blank"}
+                  rel={"noreferrer"}
+                  href="https://www.youtube.com/c/OpInCoCommunity"
+                >
+                  <BsYoutube />
+                </a>
               </div>
             </div>
           </div>
@@ -64,7 +88,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
