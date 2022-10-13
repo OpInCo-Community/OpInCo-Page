@@ -9,15 +9,15 @@ const ContributorCard = ({ data }: { data: Contributor }) => {
         <div className="flex flex-col md:gap-3 md:flex-row hover:bg-[#27c4a54d] px-4 py-3 items-end gap-1">
           <h3 className="text-3xl font-semibold">{data["project-name"]}</h3>
           <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-400">
-            by {data.name}
+            by {data?.name}
           </h4>
         </div>
       </a>
       <div className="flex text-lg text-white bg-accent-200 px-4 py-2 gap-6 border-accent-200 border-dashed border-t-2">
-        <a href={data.github}>
+        <a href={data?.github}>
           <FaGithub />
         </a>
-        <a href={data.linkedIn}>
+        <a href={data?.linkedIn}>
           <FaLinkedinIn />
         </a>
       </div>
