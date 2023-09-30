@@ -79,10 +79,10 @@ const Footer = () => {
             target={"_blank"}
             rel={"noreferrer"}
             className="flex underline items-center gap-1"
-            href="http://dewanshthakur.herokuapp.com"
+            href="https://dewansh.space"
           >
             <BiLink className="inline" />
-            Dewansh Thakur, Technical Team Opinco
+            Dewansh Thakur
           </a>
           {/* </p> */}
         </div>
